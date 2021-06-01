@@ -4,6 +4,7 @@
 ## Basics
 
 ```java
+// ClassName.java - public main Class should be named after file.java name
 public class ClassName{ //class declaration
   public static void main(String[] args){ // method declaration
     //tasks
@@ -18,6 +19,7 @@ public class ClassName{ //class declaration
 5. Java is a compiled language. Compilers transform code into an executable class.
 6. sigle line comment ``` //.... ``` , multiple lines comment ``` /* ..... */ ```
 7. Java is a case-sensitive language.
+8. extension .java & file.java should have one public class that is named after file name. this class should have the main() method.
 
 
 
@@ -78,6 +80,8 @@ Java’s ```static``` typing helps programmers avoid runtime errors, and thus ha
 
 ## Object Oriented Programming (OOP) - Classes & Objects
 ---
+Classes define the state and behavior of their instances. Behavior comes from methods defined in the class. State comes from instance fields declared inside the class. objects are the instances of a class. 
+
 ___Declaration___
 ```java
 public class ClassName{
@@ -86,7 +90,7 @@ public class ClassName{
   }
 }
 ```
-# Constructor
+### Constructor
 * To create an instance(object), we need to call or invoke the constructor within ```main()``` like ```new ClassName()```.
 
 ```java
@@ -118,7 +122,29 @@ System.out.println(thunderBird); // Prints: null
 ```
 > It’s important to note that if we use a ```null``` reference to call a method or access an instance variable, we will receive a ```NullPointerException``` error.
 
-When an object is created, the constructor sets the ___initial state___ of the object. The ___state___ is made up of associated data that represents the characteristics of an object.
+When an ___object___ is created, the ___constructor___ sets the ___initial state___ of the object. The ___state___ is made up of associated data that represents the characteristics of an object. add data to an object by introducing ___instance variables___, or ___instance fields___. 
+
+> If we do not define a constructor, the Java compiler will generate a default constructor that contains no arguments and assigns the object default values. Default values can be created by assigning values to the instance fields during their declaration.
+
+### Constructor Overloading
+In Java, because of constructor overloading, a class can have multiple constructors as long as they have different parameter values. The signature is useful in that it helps the compiler differentiate between the different methods.
+
+```java
+public class ClassName{
+  public ClassName(){} //default Constructor
+  public ClassName(int par1, String par2){} // Constructor2
+  public ClassName(boolean par1, double par2, char par3){}
+}
+```
+
+### Methods
+
+Every method has its own unique method signature which is comprised of the method’s name and its parameter type.
+```java
+modifier return_type methodName(type parameters)
+```
+
+> ___procedural abstraction___: knowing what a method does, but not how it accomplishes it.
 
 
 ## Modifier
@@ -127,10 +153,4 @@ When an object is created, the constructor sets the ___initial state___ of the o
 ## Exceptions
 * ```ArithmeticException``` - dividing any number by ```0``` will throw an ```ArithmeticException``` error as a result. 
 * ```NullPointerException``` - using a ```null``` reference to call a method or access an instance variable will throw a ```NullPointerException``` error.
-
-
-
-
-
-
 
