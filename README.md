@@ -139,12 +139,25 @@ public class ClassName{
 
 ### Methods
 
+___Definition___: A method is a task that an object of a class performs.
+
 Every method has its own unique method signature which is comprised of the method’s name and its parameter type.
 ```java
 modifier return_type methodName(type parameters)
 ```
 
+* When we add a non-static method to a class, it becomes available to use on an object of that class.
+
+> Code generally runs in a top-down order where code execution starts at the top of a program and ends at the bottom of a program; however, methods are ignored by the compiler unless they are being called.
+>
+> When a method is called, the compiler executes every statement contained within the method. Once all method instructions are executed, the top-down order of execution continues.
+
+
 > ___procedural abstraction___: knowing what a method does, but not how it accomplishes it.
+
+#### Scope
+
+We mark the domain of this task using curly braces: ```{```, and ```}```. Everything inside the curly braces is part of the task. This domain is called the ___scope___ of a method. We can’t access variables that are declared inside a method in code that is outside the scope of that method. 
 
 
 ## Modifier
