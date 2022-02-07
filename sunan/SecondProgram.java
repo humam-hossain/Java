@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class SecondProgram {
     public static void main(String[] args) {
-        String full_name;
+        String full_name, cgpa;
         int id, section, course_code;
-        double cgpa;
+        // double cgpa;
 
         try(Scanner input = new Scanner(System.in)){
             System.out.print("Enter your full name: ");
@@ -23,7 +23,7 @@ public class SecondProgram {
             course_code = input.nextInt();
 
             System.out.print("Enter your cgpa: ");
-            cgpa = input.nextDouble();
+            cgpa = input.nextLine();
 
             System.out.println("\nFull Name: " + full_name);
             System.out.println("ID: " + id);
