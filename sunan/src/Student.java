@@ -1,3 +1,5 @@
+package src;
+
 // 4. Take three students full name,id,section,cgpa,course code from the user 
 // input. Print all information,Also calculate the sum and average of 
 // cgpa.Print results.
@@ -10,22 +12,22 @@ public class Student{
     double cgpa;
 
     public Student(){
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter your name: ");
-        name = input.next();
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter your name: ");
+            name = input.next();
 
-        System.out.print("Enter id: ");
-        id = input.nextInt();
+            System.out.print("Enter id: ");
+            id = input.nextInt();
 
-        System.out.print("Enter section: ");
-        section = input.nextInt();
+            System.out.print("Enter section: ");
+            section = input.nextInt();
 
-        System.out.print("Enter cgpa: ");
-        cgpa = input.nextDouble();
+            System.out.print("Enter cgpa: ");
+            cgpa = input.nextDouble();
 
-        System.out.print("Enter course code: ");
-        course_code = input.nextInt();
-
+            System.out.print("Enter course code: ");
+            course_code = input.nextInt();
+        }
         System.out.println("\n");
 
         // input.close();   

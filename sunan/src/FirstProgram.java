@@ -1,3 +1,5 @@
+package src;
+
 // 1.  Declare variables using your full name,id,section,cgpa.Then print in the 
 // console screen. 
 

@@ -1,3 +1,5 @@
+package Lab2.src;
+
 // 2. Write a program to print the result of this equation                     
 // Result = 3π +(height * width) + height^2 /(2π * width^2)  
 // Note: Take height and width from the user input.

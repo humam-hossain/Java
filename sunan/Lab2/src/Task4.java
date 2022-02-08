@@ -1,3 +1,5 @@
+package Lab2.src;
+
 // 4. A person went to a City bank ATM Booth and entered his card to 
 // withdraw N amount of money. 
 // Now consider the below cases: 
@@ -17,10 +19,10 @@ public class Task4 {
     public static void main(String[] args) {
         int n;
         
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Withdraw = ");
-        n = input.nextInt();
+        try (Scanner input = new Scanner(System.in)) {
+			System.out.print("Withdraw = ");
+			n = input.nextInt();
+		}
 
         if(n < 500){
             System.out.println("INVALID AMOUNT");

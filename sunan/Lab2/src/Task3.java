@@ -1,3 +1,5 @@
+package Lab2.src;
+
 // 3. Take five students name,id,section,cgpa,gender from user input. 
 // i.Print students id,section if gender is  female and name length is 4 
 // ii.Print students name,cgpa if gender is male and name start with S 
@@ -10,22 +12,22 @@ public class Task3 {
     double cgpa;
 
     public Task3(){
-        Scanner input = new Scanner(System.in);
-        System.out.print("Student Name: ");
-        name = input.next();
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Student Name: ");
+            name = input.next();
 
-        System.out.print("ID: ");
-        id = input.nextInt();
+            System.out.print("ID: ");
+            id = input.nextInt();
 
-        System.out.print("Section: ");
-        section = input.nextInt();
+            System.out.print("Section: ");
+            section = input.nextInt();
 
-        System.out.print("CGPA: ");
-        cgpa = input.nextDouble();
+            System.out.print("CGPA: ");
+            cgpa = input.nextDouble();
 
-        System.out.print("Gender: ");
-        gender = input.next();
-
+            System.out.print("Gender: ");
+            gender = input.next();
+        }
         System.out.println();
     }
 

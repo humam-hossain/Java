@@ -1,3 +1,5 @@
+package Lab2.src;
+
 // 1. Take Three students Full Name,id,section,total marks from user input. Calculate 
 // their grade and grade point using NSU grading policy.Then Print all 
 // information .(Solve this problem using if,,else if and switch..case) 
@@ -10,19 +12,19 @@ public class Task1 {
     double total_marks, grade_point;
 
     public Task1(){
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Student's Full Name: ");
+            full_name = input.nextLine();
 
-        System.out.print("Student's Full Name: ");
-        full_name = input.nextLine();
+            System.out.print("ID: ");
+            id = input.nextInt();
 
-        System.out.print("ID: ");
-        id = input.nextInt();
+            System.out.print("Section: ");
+            section = input.nextInt();
 
-        System.out.print("Section: ");
-        section = input.nextInt();
-
-        System.out.print("Total Marks: ");
-        total_marks = input.nextDouble();
+            System.out.print("Total Marks: ");
+            total_marks = input.nextDouble();
+        }
 
         if(total_marks < 60){
             grade = "F";
