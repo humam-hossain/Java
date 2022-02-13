@@ -1,4 +1,4 @@
-package src;
+package others.src;
 
 // 3.  Declare all types of data type using user input.Then print in the console 
 // screen.

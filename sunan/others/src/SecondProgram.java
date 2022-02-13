@@ -1,4 +1,4 @@
-package src;
+package others.src;
 
 // 2.  Take a student full name,id,section,course code,cgpa from user 
 // input.Then print in the console screen. 
