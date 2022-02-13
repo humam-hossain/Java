@@ -6,21 +6,22 @@ import java.lang.Math;
 
 public class Divisors {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int num;
+        try (Scanner input = new Scanner(System.in)) {
+			int num;
 
-        System.out.print("Enter an integer: ");
-        num = input.nextInt();
-        
-        System.out.print("divisors of " + num + " are 1 ");
-        for(int i=2; i<Math.sqrt(num); i++){
-            if(num % i == 0){
-                if(num/i == i){
-                    System.out.println(i + " ");
-                }else{
-                    System.out.print(i + " " + num/i + " ");
-                }
-            }
-        }
+			System.out.print("Enter an integer: ");
+			num = input.nextInt();
+			
+			System.out.print("divisors of " + num + " are 1 ");
+			for(int i=2; i<Math.sqrt(num); i++){
+			    if(num % i == 0){
+			        if(num/i == i){
+			            System.out.println(i + " ");
+			        }else{
+			            System.out.print(i + " " + num/i + " ");
+			        }
+			    }
+			}
+		}
     }
 }
