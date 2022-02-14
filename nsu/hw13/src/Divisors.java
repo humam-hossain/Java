@@ -8,19 +8,24 @@ public class Divisors {
     public static void main(String[] args) {
         try (Scanner input = new Scanner(System.in)) {
 			int num;
+			double condition;
 
 			System.out.print("Enter an integer: ");
 			num = input.nextInt();
-			
-			System.out.print("divisors of " + num + " are 1 ");
-			for(int i=2; i<Math.sqrt(num); i++){
+			condition = Math.sqrt(num);
+
+			// System.out.println(Math.round(condition));
+
+			System.out.print("divisors of " + num + " are 1, ");
+			for(int i=2; i<condition; i++){
 			    if(num % i == 0){
 			        if(num/i == i){
-			            System.out.println(i + " ");
+			            System.out.print(i + ", ");
 			        }else{
-			            System.out.print(i + " " + num/i + " ");
+			            System.out.print(i + ", " + num/i + ", ");
 			        }
 			    }
+
 			}
 		}
     }
