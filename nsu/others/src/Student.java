@@ -1,42 +1,49 @@
-package others.src;
-
-// Take three students' full names, IDs, ages from the user input. 
-// Then print student name, id, if age is between 23-26 and age, is not even.
+// 2. Declare a class named calculation with methods named, 
+ 
+// Void allSum()—calculate sum of all marks and cgpa 
+// double allAverage()--calcualte average of all marks and cgpa 
+// int evenSum()—calcualte sum and average of all even marks 
+// double oddSum()—calcualte suma nd average of all odd marks 
+ 
+// Take  eight  students  full  name,marks,cgpa  from  user  input  in  main  method. 
+// Then pass 1st,3rd,5th ,7th  students info to oddSum
+// and 2nd, 4th, 6th,8th students info to evenSum function. 
+// Pass all students info to allSum and allAverage function. 
+// Then print the results.
 
 import java.util.Scanner;
 
 public class Student{
     String name;
-    int id, age;
+    int mark;
+    double cgpa;
+    
 
     public Student(){
-        try (Scanner input = new Scanner(System.in)) {
-            System.out.print("Enter your Fullname: ");
-            name = input.nextLine();
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        name = input.nextLine();
 
-            System.out.print("Enter id: ");
-            id = input.nextInt();
+        System.out.print("mark: ");
+        mark = input.nextInt();
 
-            System.out.print("Age: ");
-            age = input.nextInt();
-        }
+        System.out.print("CGPA: ");
+        cgpa = input.nextDouble();
+
         System.out.println("\n");
     }
 
-    public void info_print(){
-        if(age >= 23 && age <= 26 && age % 2 != 0){
-            System.out.println("Student Name: " + name);
-            System.out.println("ID: " + id);
-            System.out.println("\n");
-        }
-    }
     public static void main(String[] args) {
-        Student std1 = new Student();
-        Student std2 = new Student();
-        Student std3 = new Student();
+        Student[] std = new Student[8];
+        Calculation obj = new Calculation();
+        
+        for(int i=0; i<8; i++){
+            std[i] = new Student();
+        }
 
-        std1.info_print();
-        std2.info_print();
-        std3.info_print();
+        obj.evenSum(std[1], std[3], std[5], std[7]);
+        obj.oddSum(std[0], std[2], std[4], std[6]);
+        obj.allSum(std);
+        obj.allAverage(std);
     }
 }
