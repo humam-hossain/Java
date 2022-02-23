@@ -4,47 +4,21 @@
 // Output: 2 4
 
 import java.util.Scanner;
-
 public class Task4 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        
-        System.out.print("Enter size: ");
-        int size = input.nextInt();
-        int[] arr = new int[size];
-        int min, max;
-        
-        System.out.print("Enter numbers: ");
-        arr[0] = input.nextInt();
-        min = arr[0];
-        max = arr[0];
+        Scanner input= new Scanner(System.in);
+        System.out.println("Enter size: ");
+        int size=input.nextInt();
+        int[] number= new int[size];
 
-        for(int i=1; i<size; i++){
-            arr[i] = input.nextInt();
-
-            if(arr[i] > max){
-                max = arr[i];
-            }
-            if(arr[i] < min){
-                min = arr[i];
+        System.out.println("Enter numbers: ");
+        for(int count=0; count<number.length; count++){
+            number[count]=input.nextInt();
+        }
+        for(int count=0; count<number.length-2; count++){
+            if(number[count]==number[count+1] && number[count]==number[count+2]){
+                System.out.println("Output: "+number[count]);
             }
         }
-
-        int c_size = max - min + 1;
-        // System.out.println(c_size);
-        int[] count = new int[c_size];
-
-        for(int i=0; i<size; i++){
-            count[arr[i]-min]++;
-        }
-
-        System.out.print("Output: ");
-        for(int i=0; i<c_size; i++){
-            if(count[i]>0){
-                System.out.print((i+min) + " ");
-            }
-        }        
-
-        input.close();
     }
 }
