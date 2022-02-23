@@ -7,7 +7,12 @@ import java.util.Scanner;
 public class Student{
     String name, gender;
     int id, section;
-    double cgpa;
+    double cgpa;// Create a class with an overloaded method named Search.
+    // void Search(parameters): It will print the student marks and cgpa 
+    // If the name is sakib and the length is 6. double Search(parameters): It will print the sum and 
+    // average of cgpa If the gender is male and the name end with khan. Now Take two students' names, 
+    // marks,cgpa from user input in the main method. Then print the results using search methods.
+    
     
 
     public Student(){
