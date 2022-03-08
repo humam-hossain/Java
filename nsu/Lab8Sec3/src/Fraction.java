@@ -46,7 +46,6 @@ public class Fraction {
         this.denominator = this.denominator * fraction.numerator;
     }
 
-    @Override
     public String toString(){
         return this.numerator + "/" + this.denominator;
     }
