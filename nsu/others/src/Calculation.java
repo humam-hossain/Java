@@ -1,4 +1,4 @@
-public class Calculation {
+public class CALCULATION {
     void allSum(Student[] std){
         int sum=0;
         
