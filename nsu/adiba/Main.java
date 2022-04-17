@@ -1,5 +1,3 @@
-import java.util.Date;
-
 
 class Human {
     private String name;
