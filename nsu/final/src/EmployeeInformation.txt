@@ -1,3 +1,0 @@
-Rahim	124	1400	018777887	Dhaka	Manager
-Rahim2	123	1200	018777887	Dhaka	Manager
-Rahim3	122	1225	018777887	Dhaka	Manager
