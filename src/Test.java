@@ -1,24 +1,33 @@
-// What is wrong in the following code?
-public class Test {
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.Scanner;
+
+public class Test{
   public static void main(String[] args) {
-    Person[] persons = {new Person(3), new Person(4), new Person(1)};
-    java.util.Arrays.sort(persons, (first, second)->{
-      return first.getId() - second.getId();
-    });
+    try {
+      FileReader fr = new FileReader("in");
+      Scanner in = new Scanner(fr);
+      String course = "[";
 
-    for(int i=0; i<persons.length; i++){
-      System.out.println(persons[i].getId());
+      File file = new File("course");
+      FileWriter fw = new FileWriter("course");
+      
+  
+      while(in.hasNextLine()){
+        course += '"'+in.nextLine()+'"' + ",";
+      }
+      course+= "]";
+
+      fw.write(course);
+      fw.close();
+  
+      in.close();
+
+      
+      
+    } catch (Exception e) {
+
     }
-  }
-}
-class Person {
-  private int id;
- 
-  Person(int id) {
-    this.id = id;         
-  }
-
-  int getId(){
-    return this.id;
   }
 }
