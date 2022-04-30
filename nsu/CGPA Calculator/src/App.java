@@ -20,7 +20,8 @@ import javafx.stage.Stage;
 public class App extends Application{
     final int SCENE_WIDTH = 1200;
     final int SCENE_HEIGHT = 700;
-
+    final int HBOX_GAP = 30;
+    final int VBOX_GAP = 50;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -61,7 +62,7 @@ public class App extends Application{
         ComboBox[] combox_credit = new ComboBox[5];
         ComboBox[] combox_grade = new ComboBox[5];
 
-        String[] str_course = {"ENG 102 Introduction to Composition","ENG 103 Intermediate Composition","ENG 111 Public Speaking","PHI 101 Introduction to Philosophy","PHI 104 Introduction to Ethics","LBA 101 Bangladesh Culture and Heritage","LBA 102 Introduction to World Civilization","POL 101 Introduction to Political Science","POL 104 Introduction to Governance","ECO 101 Introduction to Microeconomics","ECO 104 Introduction to Macroeconomics","SOC 101 Introduction to Sociology","ENV 203/ GEO 205 Introduction to Bangladesh Geography","ANT 101 Introduction to Anthropology","BIO 103 Biology I","MAT 116 Pre-Calculus","MAT 120 Calculus-I","MAT 125 Linear Algebra","MAT 130 Calculus II","MAT 250 Calculus III","MAT 350 Engineering Mathematics","MAT 361 Probability and Statistics","PHY 107 Physics I","PHY 108 Physics II","CHE 101 Chemistry I","EEE 452 Engineering Economics","CEE 110 Engineering Drawing (EEE 154)","CSE 115 Programming Language I","CSE 115L Programming Language I Lab","CSE 215 Programming Language II","CSE 215L Programming Language II Lab","CSE 173 Discrete Mathematics","CSE 225 Data Structures and Algorithms","CSE 225L Data Structures and Algorithms Lab","CSE 231 Digital Logic design","CSE 231L Digital Logic design Lab","CSE 299 Junior Design Course","EEE 141 Electrical Circuits I","EEE 141L Electrical Circuits I Lab","EEE 111/ ETE 111 Analog Electronics-I","EEE 111L/ ETE 111L Analog Electronics-I Lab","CSE 311 Database Systems","CSE 311L Database Systems Lab","CSE 323 Operating Systems Design","CSE 327 Software Engineering","CSE 331 Microprocessor Interfacing & Embedded System","CSE 331L Microprocessor Interfacing & Embedded System Lab","CSE 332 Computer Organization and Architecture","CSE 373 Design and Analysis of Algorithms","CSE 325/CSE 425 Concepts of Programming Language","CSE 498/EEE 498/ETE 498 Internship/Co-op/Directed Research","CSE499A/EEE499A/ETE499A Senior Design I","CSE499B/EEE499B/ETE499B Senior Design II","CSE 417 Numerical Methods","CSE 401 Advanced Programming Techniques","CSE 418 Computer Graphics","CSE 426 Compiler Constructions","CSE 473 Theory of Computation","CSE 491 Special Topics","CSE 411 Advanced Database Systems","CSE 424 Object-Oriented Software Developments","CSE 427 Software Quality Assurances & Testing","CSE 428 Software Process Management","CSE 429 Software System Architecture","CSE 492 Special Topics","CSE 422 Modelling and Simulation","CSE 438 Data Communication & Network","CSE 482 Internet and Web Technology","CSE 485 Digital Signal Processing","CSE 486 Mobile and Wireless Application Development","CSE 493 Special Topics","CSE 433 Advanced Computer Architecture","CSE 435 Introduction to VLSI Design","CSE 413 Verilog HDL: Modelling, Simulation and synthesis","CSE 414 Advanced Chip Design Methodology and Optimiza.using HDL","CSE 494 Special Topics","CSE 419 Data Mining","CSE 440 Artificial Intelligence","CSE 445 Machine Learning","CSE 465 Pattern Recognition and Neural Network","CSE 467 Digital Image Processing","CSE 468 Computer Vision","CSE 470 Theory of Fuzzy Systems","CSE 495 Special Topics","CSE 446 Introductions to Biostr_informatics","CSE 447 Molecular Biology","CSE 448 Genome Sequence & Analysis","CSE 449 Structural Biostr_informatics","CSE 496 Special Topics"};
+        String[] str_course = {"ENG 102 Introduction to Composition","ENG 103 Intermediate Composition","ENG 111 Public Speaking","PHI 101 Introduction to Philosophy","PHI 104 Introduction to Ethics","LBA 101 Bangladesh Culture and Heritage","LBA 102 Introduction to World Civilization","POL 101 Introduction to Political Science","POL 104 Introduction to Governance","ECO 101 Introduction to Microeconomics","ECO 104 Introduction to Macroeconomics","SOC 101 Introduction to Sociology","ENV 203/ GEO 205 Introduction to Bangladesh Geography","ANT 101 Introduction to Anthropology","BIO 103 Biology I","MAT 116 Pre-Calculus","MAT 120 Calculus-I","MAT 125 Linear Algebra","MAT 1HBOX_GAP Calculus II","MAT 2VBOX_GAP Calculus III","MAT 3VBOX_GAP Engineering Mathematics","MAT 361 Probability and Statistics","PHY 107 Physics I","PHY 108 Physics II","CHE 101 Chemistry I","EEE 452 Engineering Economics","CEE 110 Engineering Drawing (EEE 154)","CSE 115 Programming Language I","CSE 115L Programming Language I Lab","CSE 215 Programming Language II","CSE 215L Programming Language II Lab","CSE 173 Discrete Mathematics","CSE 225 Data Structures and Algorithms","CSE 225L Data Structures and Algorithms Lab","CSE 231 Digital Logic design","CSE 231L Digital Logic design Lab","CSE 299 Junior Design Course","EEE 141 Electrical Circuits I","EEE 141L Electrical Circuits I Lab","EEE 111/ ETE 111 Analog Electronics-I","EEE 111L/ ETE 111L Analog Electronics-I Lab","CSE 311 Database Systems","CSE 311L Database Systems Lab","CSE 323 Operating Systems Design","CSE 327 Software Engineering","CSE 331 Microprocessor Interfacing & Embedded System","CSE 331L Microprocessor Interfacing & Embedded System Lab","CSE 332 Computer Organization and Architecture","CSE 373 Design and Analysis of Algorithms","CSE 325/CSE 425 Concepts of Programming Language","CSE 498/EEE 498/ETE 498 Internship/Co-op/Directed Research","CSE499A/EEE499A/ETE499A Senior Design I","CSE499B/EEE499B/ETE499B Senior Design II","CSE 417 Numerical Methods","CSE 401 Advanced Programming Techniques","CSE 418 Computer Graphics","CSE 426 Compiler Constructions","CSE 473 Theory of Computation","CSE 491 Special Topics","CSE 411 Advanced Database Systems","CSE 424 Object-Oriented Software Developments","CSE 427 Software Quality Assurances & Testing","CSE 428 Software Process Management","CSE 429 Software System Architecture","CSE 492 Special Topics","CSE 422 Modelling and Simulation","CSE 438 Data Communication & Network","CSE 482 Internet and Web Technology","CSE 485 Digital Signal Processing","CSE 486 Mobile and Wireless Application Development","CSE 493 Special Topics","CSE 433 Advanced Computer Architecture","CSE 435 Introduction to VLSI Design","CSE 413 Verilog HDL: Modelling, Simulation and synthesis","CSE 414 Advanced Chip Design Methodology and Optimiza.using HDL","CSE 494 Special Topics","CSE 419 Data Mining","CSE 440 Artificial Intelligence","CSE 445 Machine Learning","CSE 465 Pattern Recognition and Neural Network","CSE 467 Digital Image Processing","CSE 468 Computer Vision","CSE 470 Theory of Fuzzy Systems","CSE 495 Special Topics","CSE 446 Introductions to Biostr_informatics","CSE 447 Molecular Biology","CSE 448 Genome Sequence & Analysis","CSE 449 Structural Biostr_informatics","CSE 496 Special Topics"};
         String[] str_grade = {"A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "F"};
         String[] str_credit = {"0","1", "1.5","3"};
         String[][] str_info = new String[5][3];
@@ -216,44 +217,44 @@ public class App extends Application{
                 // r_value_cgpa.setFont(font);
 
                 // layouts
-                HBox r_hbox_header = new HBox(30, r_label_header);
+                HBox r_hbox_header = new HBox(HBOX_GAP, r_label_header);
                 r_hbox_header.setAlignment(Pos.CENTER);
 
-                HBox r_hbox_name_id_info = new HBox(30, r_label_label_name, r_label_value_name, r_label_label_id, r_label_value_id);
+                HBox r_hbox_name_id_info = new HBox(HBOX_GAP, r_label_label_name, r_label_value_name, r_label_label_id, r_label_value_id);
                 r_hbox_name_id_info.setAlignment(Pos.CENTER);
 
                 // Course info layout
-                VBox r_vbox_subject = new VBox(50, r_header_subject);
+                VBox r_vbox_subject = new VBox(VBOX_GAP, r_header_subject);
                 r_vbox_subject.getChildren().addAll(r_subject);
                 r_vbox_subject.setAlignment(Pos.CENTER);
 
-                VBox r_vbox_course = new VBox(50, r_header_course);
+                VBox r_vbox_course = new VBox(VBOX_GAP, r_header_course);
                 r_vbox_course.getChildren().addAll(r_course);
                 r_vbox_course.setAlignment(Pos.CENTER);
 
-                VBox r_vbox_credit = new VBox(50, r_header_credit);
+                VBox r_vbox_credit = new VBox(VBOX_GAP, r_header_credit);
                 r_vbox_credit.getChildren().addAll(r_credit);
                 r_vbox_credit.setAlignment(Pos.CENTER);
 
-                VBox r_vbox_grade = new VBox(50, r_header_grade);
+                VBox r_vbox_grade = new VBox(VBOX_GAP, r_header_grade);
                 r_vbox_grade.getChildren().addAll(r_grade);
                 r_vbox_grade.setAlignment(Pos.CENTER);
 
-                HBox r_hbox_course_info = new HBox(30, r_vbox_subject, r_vbox_course, r_vbox_credit, r_vbox_grade);
+                HBox r_hbox_course_info = new HBox(HBOX_GAP, r_vbox_subject, r_vbox_course, r_vbox_credit, r_vbox_grade);
                 r_hbox_course_info.setAlignment(Pos.CENTER);
 
                 // CGPA layout
-                HBox r_hbox_label_cgpa = new HBox(30, r_label_cgpa);
+                HBox r_hbox_label_cgpa = new HBox(HBOX_GAP, r_label_cgpa);
                 r_hbox_label_cgpa.setAlignment(Pos.CENTER);
 
-                HBox r_hbox_value_cgpa = new HBox(30, r_value_cgpa);
+                HBox r_hbox_value_cgpa = new HBox(HBOX_GAP, r_value_cgpa);
                 r_hbox_value_cgpa.setAlignment(Pos.CENTER);
 
-                VBox r_vbox_cgpa_info = new VBox(20, r_hbox_label_cgpa, r_hbox_value_cgpa);
+                VBox r_vbox_cgpa_info = new VBox(VBOX_GAP, r_hbox_label_cgpa, r_hbox_value_cgpa);
                 r_vbox_cgpa_info.setAlignment(Pos.CENTER);
 
                 // final layout
-                VBox r_final_layout = new VBox(50, r_hbox_header, r_hbox_name_id_info, r_hbox_course_info, r_vbox_cgpa_info);
+                VBox r_final_layout = new VBox(VBOX_GAP, r_hbox_header, r_hbox_name_id_info, r_hbox_course_info, r_vbox_cgpa_info);
                 r_final_layout.setAlignment(Pos.CENTER);
 
                 // scene
@@ -269,38 +270,38 @@ public class App extends Application{
         });
 
         // layouts
-        HBox hbox_header = new HBox(30, label_header);
+        HBox hbox_header = new HBox(HBOX_GAP, label_header);
         hbox_header.setAlignment(Pos.CENTER);
 
-        HBox hbox_name_id_info = new HBox(30, label_name, tf_name, label_id, tf_id);
+        HBox hbox_name_id_info = new HBox(HBOX_GAP, label_name, tf_name, label_id, tf_id);
         hbox_name_id_info.setAlignment(Pos.CENTER);
 
         // course info layout
-        VBox vbox_subject = new VBox(50, header_subject);
+        VBox vbox_subject = new VBox(VBOX_GAP, header_subject);
         vbox_subject.getChildren().addAll(label_subject);
         vbox_subject.setAlignment(Pos.CENTER);
 
-        VBox vbox_course = new VBox(50, header_course);
+        VBox vbox_course = new VBox(VBOX_GAP, header_course);
         vbox_course.getChildren().addAll(combox_course);
         vbox_course.setAlignment(Pos.CENTER);
 
-        VBox vbox_credit = new VBox(50, header_credit);
+        VBox vbox_credit = new VBox(VBOX_GAP, header_credit);
         vbox_credit.getChildren().addAll(combox_credit);
         vbox_credit.setAlignment(Pos.CENTER);
 
-        VBox vbox_grade = new VBox(50, header_grade);
+        VBox vbox_grade = new VBox(VBOX_GAP, header_grade);
         vbox_grade.getChildren().addAll(combox_grade);
         vbox_grade.setAlignment(Pos.CENTER);
 
-        HBox hbox_course_info = new HBox(30, vbox_subject, vbox_course, vbox_credit, vbox_grade);
+        HBox hbox_course_info = new HBox(HBOX_GAP, vbox_subject, vbox_course, vbox_credit, vbox_grade);
         hbox_course_info.setAlignment(Pos.CENTER);
 
         // calculate button layout
-        HBox hbox_calculate = new HBox(30, btn_calculate);
+        HBox hbox_calculate = new HBox(HBOX_GAP, btn_calculate);
         hbox_calculate.setAlignment(Pos.CENTER);
 
         // final layout
-        VBox final_layout = new VBox(50, hbox_header, hbox_name_id_info, hbox_course_info, hbox_calculate);
+        VBox final_layout = new VBox(VBOX_GAP, hbox_header, hbox_name_id_info, hbox_course_info, hbox_calculate);
         final_layout.setAlignment(Pos.CENTER);
         
         // scene
