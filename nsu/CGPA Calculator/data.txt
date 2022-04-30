@@ -1,6 +1,6 @@
 "Humam Hossain" 202111078
-"CSE 115 Programming Language I" 1 A
-"CSE 231L Digital Logic design Lab" 1.5 A
-"CSE 231L Digital Logic design Lab" 3 F
-"EEE 111/ ETE 111 Analog Electronics-I" 3 A
-"CSE 231 Digital Logic design" 1.5 A
+"LBA 102 Introduction to World Civilization" 1.5 C+
+"LBA 102 Introduction to World Civilization" 3 B
+"POL 101 Introduction to Political Science" 1.5 A
+"LBA 102 Introduction to World Civilization" 0 A-
+"LBA 101 Bangladesh Culture and Heritage" 3 A

@@ -13,43 +13,46 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
+// import javafx.scene.text.Font;
+// import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 public class App extends Application{
+    final int SCENE_WIDTH = 1200;
+    final int SCENE_HEIGHT = 700;
+
 
     @Override
     public void start(Stage stage) throws Exception {
         // Fonts
-        Font font = Font.font("Verdana", FontWeight.BOLD, 15);
-        Font font_header = Font.font("Verdana", FontWeight.BOLD, 35);
-        Font font_btn_calculate = Font.font("Verdana", FontWeight.BOLD, 20);
+        // Font font = Font.font("Verdana", FontWeight.BOLD, 15);
+        // Font font_header = Font.font("Verdana", FontWeight.BOLD, 35);
+        // Font font_btn_calculate = Font.font("Verdana", FontWeight.BOLD, 20);
 
         // ui elements
         Label label_header = new Label("CGPA Calculator");
-        label_header.setFont(font_header);
+        // label_header.setFont(font_header);
 
         Label label_name = new Label("Name: ");
-        label_name.setFont(font);
+        // label_name.setFont(font);
 
         Label label_id = new Label("ID: ");
-        label_id.setFont(font);
+        // label_id.setFont(font);
 
         TextField tf_name = new TextField();
         TextField tf_id = new TextField();
 
         Label header_subject = new Label();
-        header_subject.setFont(font);
+        // header_subject.setFont(font);
         
         Label header_course = new Label("Course");
-        header_course.setFont(font);
+        // header_course.setFont(font);
         
         Label header_credit = new Label("Credit");
-        header_credit.setFont(font);
+        // header_credit.setFont(font);
         
         Label header_grade = new Label("Grade");
-        header_grade.setFont(font);
+        // header_grade.setFont(font);
         
 
         // Course info ui
@@ -66,9 +69,10 @@ public class App extends Application{
         for(int i=0; i<label_subject.length; i++){
             final int index = i;
             label_subject[i] = new Label("Course " + (i+1) + " : ");
-            label_subject[i].setFont(font);
+            // label_subject[i].setFont(font);
 
             combox_course[i] = new ComboBox<>();
+            combox_course[i].setPromptText("Select Course");
             combox_course[i].getItems().addAll(str_course);
             combox_course[index].setOnAction((event)->{
                 Object selectedItem = combox_course[index].getSelectionModel().getSelectedItem();
@@ -77,6 +81,7 @@ public class App extends Application{
             });
 
             combox_credit[i] = new ComboBox<>();
+            combox_credit[i].setPromptText("Select Credit");
             combox_credit[i].getItems().addAll(str_credit);
             combox_credit[index].setOnAction((event)->{
                 Object selectedItem = combox_credit[index].getSelectionModel().getSelectedItem();
@@ -86,6 +91,7 @@ public class App extends Application{
 
 
             combox_grade[i] = new ComboBox<>();
+            combox_grade[i].setPromptText("Select Grade");
             combox_grade[i].getItems().addAll(str_grade);
             combox_grade[i].setOnAction((event)->{
                 Object selectedItem = combox_grade[index].getSelectionModel().getSelectedItem();
@@ -97,7 +103,7 @@ public class App extends Application{
         }
 
         Button btn_calculate = new Button("Calculate");
-        btn_calculate.setFont(font_btn_calculate);
+        // btn_calculate.setFont(font_btn_calculate);
         btn_calculate.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -165,28 +171,28 @@ public class App extends Application{
 
                 // ui elements
                 Label r_label_header = new Label("CGPA Calculator");
-                r_label_header.setFont(font_header);
+                // r_label_header.setFont(font_header);
                 Label r_label_label_name = new Label("Name: ");
-                r_label_label_name.setFont(font);
+                // r_label_label_name.setFont(font);
 
                 Label r_label_value_name = new Label(r_str_name);
                 Label r_label_label_id = new Label("ID: ");
-                r_label_label_id.setFont(font);
+                // r_label_label_id.setFont(font);
 
                 Label r_label_value_id = new Label(r_str_id);
 
                 // course info ui elements
                 Label r_header_subject = new Label();
-                r_header_subject.setFont(font);
+                // r_header_subject.setFont(font);
 
                 Label r_header_course = new Label("Course");
-                r_header_course.setFont(font);
+                // r_header_course.setFont(font);
 
                 Label r_header_credit = new Label("Credit");
-                r_header_credit.setFont(font);
+                // r_header_credit.setFont(font);
 
                 Label r_header_grade = new Label("Grade");
-                r_header_grade.setFont(font);
+                // r_header_grade.setFont(font);
 
                 Label[] r_subject = new Label[5];
                 Label[] r_course = new Label[5];
@@ -195,7 +201,7 @@ public class App extends Application{
 
                 for(int i=0; i<str_info.length; i++){
                     r_subject[i] = new Label("Course " + (i+1) + " : ");
-                    r_subject[i].setFont(font);
+                    // r_subject[i].setFont(font);
 
                     r_course[i] = new Label(str_info[i][0]);
                     r_credit[i] = new Label(str_info[i][1]);
@@ -204,10 +210,10 @@ public class App extends Application{
 
                 // cgpa ui element
                 Label r_label_cgpa = new Label("Your CGPA : ");
-                r_label_cgpa.setFont(font);
+                // r_label_cgpa.setFont(font);
 
                 Label r_value_cgpa = new Label(String.valueOf(r_cgpa));
-                r_value_cgpa.setFont(font);
+                // r_value_cgpa.setFont(font);
 
                 // layouts
                 HBox r_hbox_header = new HBox(30, r_label_header);
@@ -251,7 +257,7 @@ public class App extends Application{
                 r_final_layout.setAlignment(Pos.CENTER);
 
                 // scene
-                Scene scene = new Scene(r_final_layout, 1000, 700);
+                Scene scene = new Scene(r_final_layout, SCENE_WIDTH, SCENE_HEIGHT);
                 
                 // stage
                 stage.setScene(scene);
@@ -298,7 +304,7 @@ public class App extends Application{
         final_layout.setAlignment(Pos.CENTER);
         
         // scene
-        Scene scene = new Scene(final_layout, 1000, 700);
+        Scene scene = new Scene(final_layout, SCENE_WIDTH, SCENE_HEIGHT);
         
         // stage
         stage.setScene(scene);
