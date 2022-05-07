@@ -58,11 +58,21 @@ public class Home extends javax.swing.JFrame {
 
         jMenuItemAddNew.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemAddNew.setText("Add New");
+        jMenuItemAddNew.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemAddNewActionPerformed(evt);
+            }
+        });
         jMenuDonor.add(jMenuItemAddNew);
         jMenuDonor.add(jSeparator1);
 
         jMenuItemUpdateDetails.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemUpdateDetails.setText("Update Details");
+        jMenuItemUpdateDetails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemUpdateDetailsActionPerformed(evt);
+            }
+        });
         jMenuDonor.add(jMenuItemUpdateDetails);
         jMenuDonor.add(jSeparator2);
 
@@ -195,6 +205,16 @@ public class Home extends javax.swing.JFrame {
             System.exit(0);
         }
     }//GEN-LAST:event_jMenuItemExitApplicationActionPerformed
+
+    private void jMenuItemAddNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAddNewActionPerformed
+        // TODO add your handling code here:
+        new AddNewDonor().setVisible(true);
+    }//GEN-LAST:event_jMenuItemAddNewActionPerformed
+
+    private void jMenuItemUpdateDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUpdateDetailsActionPerformed
+        // TODO add your handling code here:
+        new UpdateDonor().setVisible(true);
+    }//GEN-LAST:event_jMenuItemUpdateDetailsActionPerformed
 
     /**
      * @param args the command line arguments
