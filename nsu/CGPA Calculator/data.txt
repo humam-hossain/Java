@@ -1,6 +1,6 @@
-"Humam Hossain" 202111078
-"PHI 104 Introduction to Ethics" 3 C
-"LBA 101 Bangladesh Culture and Heritage" 1.5 A
-"PHI 104 Introduction to Ethics" 0 A-
-"POL 104 Introduction to Governance" 1 C+
-"LBA 101 Bangladesh Culture and Heritage" 3 A-
+"humam hossain" 12315646
+"ENG 111 Public Speaking" 1.5 A
+"PHI 101 Introduction to Philosophy" 1.5 A
+"LBA 102 Introduction to World Civilization" 1.5 A
+"LBA 102 Introduction to World Civilization" 1 A
+"LBA 101 Bangladesh Culture and Heritage" 0 A

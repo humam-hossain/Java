@@ -1,18 +1,26 @@
-import java.awt.Color;
-
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class MyFrame extends JFrame{
-    MyFrame(){
-        this.setTitle("JFrame title goes here"); // set title of the frame
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // clicking X will close the program
-        this.setResizable(false);
-        this.setSize(420, 420); // sets the x-dimension and y-dimension of frame
-        this.setVisible(true); // make frame visible
+    final static int FRAME_SIZE_X = 500;
+    final static int FRAME_SIZE_Y = 500;
 
-        ImageIcon image_logo = new ImageIcon("blood.png"); // create image icon
-        this.setIconImage(image_logo.getImage()); // change icon of frame
-        this.getContentPane().setBackground(new Color(0,0,0));
+    JButton btn;
+    MyFrame(){
+        ImageIcon iconThumbsup = new ImageIcon("thumbsup.png");
+
+        btn = new JButton("I'm a button");
+        btn.setBounds(100, 100, 250, 100);
+        btn.addActionListener(e -> System.out.println("poo"));
+        btn.setFocusable(false);
+        btn.setIcon(iconThumbsup);
+
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLayout(null);
+        this.setSize(FRAME_SIZE_X, FRAME_SIZE_Y);
+        this.setVisible(true);
+        this.add(btn);
     }
+
 }

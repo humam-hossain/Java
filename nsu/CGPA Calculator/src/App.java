@@ -105,6 +105,8 @@ public class App extends Application{
 
         Button btnCalculate = new Button("Calculate");
         // btnCalculate.setFont(font_btnCalculate);
+
+        // ekhan theke
         btnCalculate.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -268,6 +270,7 @@ public class App extends Application{
             }
             
         });
+        // ei porjonto na nite paros
 
         // layouts
         HBox hboxHeader = new HBox(HBOX_GAP, labelHeader);
