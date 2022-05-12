@@ -87,7 +87,7 @@ for(int i=0; i<strInfo.length; i++){
 rCGPA = rCGPA/rTotalCredit;
 ```
 
-This part calculates CGPA. First we take a Double type array "rGPA" of size 5 for storing GPA for each course and two Double variable "rCGPA" and "rTotalCredit" initialized with 0.0. In a for loop GPA for each course will be determined by corresponding grades. CPGA will be calculated with this formula: CGPA = ( Sum of every credit * corresponding gpa ) / Total Credit.
+This part calculates CGPA. First we take a Double type array "rGPA" of size 5 for storing GPA for each course and two Double variable "rCGPA" and "rTotalCredit" initialized with 0.0. In a for loop GPA for each course will be determined by corresponding grades. "strInfo" is a 2D array of size 5x3. First index is for each course information and The value of the second index 0, 1, 2 indicates the name of the course, credit and grade. CPGA will be calculated with this formula: CGPA = ( Sum of every credit * corresponding gpa ) / Total Credit.
 
 ### Scene Header Layout
 ![Scene Header](IMG_20220512_224751.jpg)
@@ -95,10 +95,13 @@ This part calculates CGPA. First we take a Double type array "rGPA" of size 5 fo
 ```java
 // ui
 Label rLabelHeader = new Label("CGPA Calculator");
+
 // layouts
 HBox rHboxHeader = new HBox(HBOX_GAP, rLabelHeader);
 rHboxHeader.setAlignment(Pos.CENTER);
 ```
+
+A Label object "rLabelHeader" is initialized
 
 ### Name & ID Layout
 ![Name](IMG_20220512_224827.jpg)
