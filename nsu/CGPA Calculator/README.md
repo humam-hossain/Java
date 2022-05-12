@@ -1,9 +1,10 @@
-# Report
+# <span style="font-family:Times New Roman; font-size:12;color:black;text-align:center">Report</span>
 
-## Second Scene
+## <span style="font-family:Times New Roman; font-size:12;color:black;text-align:center">Second Scene</span>
 ![scene_2](scene_2.png)
 
-After clicking "Calculate" button, second scene will appear where calculated cgpa will be shown.
+<span style="font-family:Times New Roman; font-size:12;color:black">After clicking "Calculate" button, second scene will appear where calculated cgpa will be shown.</span>
+
 ```java
 btnCalculate.setOnAction(new EventHandler<ActionEvent>() {
     @Override
@@ -13,15 +14,15 @@ btnCalculate.setOnAction(new EventHandler<ActionEvent>() {
 }
 ```
 
-### Name & ID
+### <span style="font-family:Times New Roman; font-size:12;color:black">Name & ID</span>
 ```java
 String rStrName = tfName.getText().toString();
 String rStrID = tfID.getText().toString();
 ```
 
-Storing "Name" & "ID" text field data to "rStrName" & "rStrID" String variables.  
+<span style="font-family:Times New Roman; font-size:12;color:black">Storing "Name" & "ID" text field data to "rStrName" & "rStrID" String variables.  </span>
 
-### Writing user data to a file
+### <span style="font-family:Times New Roman; font-size:12;color:black">Writing u</span>ser data to a file
 ```java
 File rFile = new File("data.txt");
 try {
@@ -46,9 +47,9 @@ try {
 }
 ```
 
-This part writes user input data from first scene to a file "data.txt". First, a File Object called "rFile" get intialized with "data.txt" argument. Then rFile.createNewFile() will create a new file. A FileWriter Object "rFw" will write to the "data.txt" file. rFw.write() method is used for writing in a file. Above code will write name and ID in the first line. Each course name, credit, grade will be written in a new line.
+<span style="font-family:Times New Roman; font-size:12;color:black">This part writes user input data from first scene to a file "data.txt". First, a File Object called "rFile" get intialized with "data.txt" argument. Then rFile.createNewFile() will create a new file. A FileWriter Object "rFw" will write to the "data.txt" file. rFw.write() method is used for writing in a file. Above code will write name and ID in the first line. Each course name, credit, grade will be written in a new line.</span>
 
-### CGPA Calculation
+### <span style="font-family:Times New Roman; font-size:12;color:black">CGPA Calc</span>ulation
 
 ```java
 Double[] rGPA = new Double[5];
@@ -87,9 +88,9 @@ for(int i=0; i<strInfo.length; i++){
 rCGPA = rCGPA/rTotalCredit;
 ```
 
-This part calculates CGPA. First we take a Double type array "rGPA" of size 5 for storing GPA for each course and two Double variable "rCGPA" and "rTotalCredit" initialized with 0.0. In a for loop GPA for each course will be determined by corresponding grades. "strInfo" is a 2D array of size 5x3. First index is for each course information and The value of the second index 0, 1, 2 indicates the name of the course, credit and grade. CPGA will be calculated with this formula: CGPA = ( Sum of every credit * corresponding gpa ) / Total Credit.
+<span style="font-family:Times New Roman; font-size:12;color:black">This code snippet calculates CGPA. First we take a Double type array "rGPA" of size 5 for storing GPA for each course and two Double variable "rCGPA" and "rTotalCredit" initialized with 0.0. In a for loop GPA for each course will be determined by corresponding grades. "strInfo" is a 2D array of size 5x3. First index is for each course information and The value of the second index 0, 1, 2 indicates the name of the course, credit and grade. CPGA will be calculated with this formula: CGPA = ( Sum of every credit * corresponding gpa ) / Total Credit. </span>
 
-### Scene Header Layout
+### <span style="font-family:Times New Roman; font-size:12;color:black">Scene Hea</span>der Layout
 ![Scene Header](IMG_20220512_224751.jpg)
 
 ```java
@@ -101,9 +102,11 @@ HBox rHboxHeader = new HBox(HBOX_GAP, rLabelHeader);
 rHboxHeader.setAlignment(Pos.CENTER);
 ```
 
+<span style="font-family:Times New Roman; font-size:12;color:black">
 A Label object "rLabelHeader" is initialized with text argument "CGPA Calculator". It is added to a HBox layout called rHBoxHeader with a gap between each label HBOX_GAP which is 30. "CGPA Calculator" label will be centered in the layout using setAlignment method with the argument Pos.CENTER.
+</span>
 
-### Name & ID Layout
+### <span style="font-family:Times New Roman; font-size:12;color:black">Name & ID</span> Layout
 ![Name](IMG_20220512_224827.jpg)
 
 ```java
@@ -117,10 +120,12 @@ Label rLabelValueID = new Label(rStrID);
 HBox rHboxNameIdInfo = new HBox(HBOX_GAP, rLabelLabelName, rLabelValueName, rLabelLabelID, rLabelValueID);
 rHboxNameIdInfo.setAlignment(Pos.CENTER);
 ```
-
+<span style="font-family:Times New Roman; font-size:12;color:black">
 Two labels are created for label "Name: " and "ID: " and two labels will contain the value of user input name and id. Then all four label will be be added to a HBox layout with gap between each label HBOX_GAP which is 30. HBox layout will add name label, name, id label, id in order. All labels will be centered in the layout using setAlignment method with the argument Pos.CENTER.
+</span>
 
-### Course Title Layout
+
+### <span style="font-family:Times New Roman; font-size:12;color:black">Course Ti</span>tle Layout
 ![course title](IMG_20220512_224848.jpg)
 
 ```java
@@ -139,9 +144,11 @@ rVboxSubject.getChildren().addAll(rSubject);
 rVboxSubject.setAlignment(Pos.CENTER);
 ```
 
+<span style="font-family:Times New Roman; font-size:12;color:black">
 This code snippet will create course titles. A course title header with no text is created to match credit and grade layout. A VBox layout is used with 50 px gap between each label. All titles are added in numerical order and aligned center of vertical layout.
+<span>
 
-### Course Layout
+### <span style="font-family:Times New Roman; font-size:12;color:black">Course La</span>yout
 ![course layout](IMG_20220512_224912.jpg)
 
 ```java
@@ -159,10 +166,11 @@ VBox rVboxCourse = new VBox(VBOX_GAP, rHeaderCourse);
 rVboxCourse.getChildren().addAll(rCourse);
 rVboxCourse.setAlignment(Pos.CENTER);
 ```
-
+<span style="font-family:Times New Roman; font-size:12;color:black">
 This code snippet will create course labels. A header label "Course" and 5 labels for selected course items from comboBox is created. A VBox layout is used with 50 px gap between each label. the header label and course labels are added to Vbox layout in order. Then all the elements in the layout are aligned in center.
+</span>
 
-### Credit Layout
+### <span style="font-family:Times New Roman; font-size:12;color:black">Credit La</span>yout
 ![Credit layout](IMG_20220512_224930.jpg)
 
 ```java
@@ -181,10 +189,11 @@ VBox rVboxCredit = new VBox(VBOX_GAP, rHeaderCredit);
 rVboxCredit.getChildren().addAll(rCredit);
 rVboxCredit.setAlignment(Pos.CENTER);
 ```
-
+<span style="font-family:Times New Roman; font-size:12;color:black">
 This code snippet will create credit labels. A header label "Credit" and 5 labels for selected credit items from comboBox is created. A VBox layout is used with 50 px gap between each label. the header label and credit labels are added to Vbox layout in order. Then all the elements in the layout are aligned in center.
+</span>
 
-### Grade Layout
+### <span style="font-family:Times New Roman; font-size:12;color:black">Grade Lay</span>out
 ![grade layout](IMG_20220512_224947.jpg)
 
 ```java
@@ -203,9 +212,11 @@ rVboxGrade.getChildren().addAll(rGrade);
 rVboxGrade.setAlignment(Pos.CENTER);
 ```
 
+<span style="font-family:Times New Roman; font-size:12;color:black">
 This code snippet will create grade labels. A header label "Grade" and 5 labels for selected course items from combobox is created. A VBox layout is used with 50 px gap between each label. the header label and grade labels are added to Vbox layout in order. Then all the elements in the layout are aligned in center.
+</span>
 
-### CGPA Layout
+### <span style="font-family:Times New Roman; font-size:12;color:black">CGPA Layo</span>ut
 ![cgpa layout](IMG_20220512_225133.jpg)
 
 ```java
@@ -223,43 +234,48 @@ rHboxValueCgpa.setAlignment(Pos.CENTER);
 VBox rVboxCgpaInfo = new VBox(VBOX_GAP, rHboxLabelCgpa, rHboxValueCgpa);
 rVboxCgpaInfo.setAlignment(Pos.CENTER);
 ```
-
+<span style="font-family:Times New Roman; font-size:12;color:black">
 This code snippet is for CGPA. A label for "Your CGPA: " and A label for calculated CGPA is created. Two HBox layout will contain each labels and a VBox layout will contain both HBox in order.
+</span>
 
-### Course Info Layout
+### <span style="font-family:Times New Roman; font-size:12;color:black">Course In</span>fo Layout
 ![course info](IMG_20220513_014415.jpg)
 
 ```java
 HBox rHboxCourseInfo = new HBox(HBOX_GAP, rVboxSubject, rVboxCourse, rVboxCredit, rVboxGrade);
 rHboxCourseInfo.setAlignment(Pos.CENTER);
 ```
-
+<span style="font-family:Times New Roman; font-size:12;color:black">
 All the vertical column layouts will be added to a HBox layout with 30 px gap between each elements. Every elements are then aligned in center.
+</span>
 
-### Final Layout
+### <span style="font-family:Times New Roman; font-size:12;color:black">Final Lay</span>out
 ![final layout](IMG_20220513_014616.jpg)
 
 ```java
 VBox rFinalLayout = new VBox(VBOX_GAP, rHboxHeader, rHboxNameIdInfo, rHboxCourseInfo, rVboxCgpaInfo);
 rFinalLayout.setAlignment(Pos.CENTER);
 ```
-
+<span style="font-family:Times New Roman; font-size:12;color:black">
 All the layouts that has been created so far will be added to the final layout.
+</span>
 
-### Creating Scene and adding final layout to the scene
+### <span style="font-family:Times New Roman; font-size:12;color:black">Creating </span>Scene and adding final layout to the scene
 
 ```java
 Scene scene = new Scene(rFinalLayout, SCENE_WIDTH, SCENE_HEIGHT);
 ```
-
+<span style="font-family:Times New Roman; font-size:12;color:black">
 A 1200x700 scene is created with the final layout.
+</span>
 
-### Adding Scene to Stage
+### <span style="font-family:Times New Roman; font-size:12;color:black">Adding Sc</span>ene to Stage
 
 ```java
 stage.setScene(scene);
 stage.setTitle("CGPA Calculator");
 stage.show();
 ```
-
+<span style="font-family:Times New Roman; font-size:12;color:black">
 The scene is added to the main stage. The title of the stage is set to "CGPA Calculator". stage.show() method will show the stage on the window.
+</span>
