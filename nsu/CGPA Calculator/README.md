@@ -19,6 +19,8 @@ String rStrName = tfName.getText().toString();
 String rStrID = tfID.getText().toString();
 ```
 
+Storing "Name" & "ID" text field data to "rStrName" & "rStrID" String variables.  
+
 ### Writing user data to a file
 ```java
 File rFile = new File("data.txt");
@@ -43,6 +45,8 @@ try {
     e.printStackTrace();
 }
 ```
+
+This part writes user input data from first scene to a file "data.txt". First, a File Object called "rFile" get intialized with "data.txt" argument. Then rFile.createNewFile() will create a new file. A FileWriter Object "rFw" will write to the "data.txt" file. rFw.write() method is used for writing in a file. Above code will write name and ID in the first line. Each course name, credit, grade will be written in a new line.
 
 ### CGPA Calculation
 
@@ -82,6 +86,8 @@ for(int i=0; i<strInfo.length; i++){
 
 rCGPA = rCGPA/rTotalCredit;
 ```
+
+This part calculates CGPA. First we take a Double type array "rGPA" of size 5 for storing GPA for each course and two Double variable "rCGPA" and "rTotalCredit" initialized with 0.0. In a for loop GPA for each course will be determined by corresponding grades. CPGA will be calculated with this formula: CGPA = ( Sum of every credit * corresponding gpa ) / Total Credit.
 
 ### Scene Header Layout
 ![Scene Header](IMG_20220512_224751.jpg)
