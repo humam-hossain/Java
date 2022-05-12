@@ -101,7 +101,7 @@ HBox rHboxHeader = new HBox(HBOX_GAP, rLabelHeader);
 rHboxHeader.setAlignment(Pos.CENTER);
 ```
 
-A Label object "rLabelHeader" is initialized
+A Label object "rLabelHeader" is initialized with text argument "CGPA Calculator". It is added to a HBox layout called rHBoxHeader with a gap between each label HBOX_GAP which is 30. "CGPA Calculator" label will be centered in the layout using setAlignment method with the argument Pos.CENTER.
 
 ### Name & ID Layout
 ![Name](IMG_20220512_224827.jpg)
@@ -117,6 +117,8 @@ Label rLabelValueID = new Label(rStrID);
 HBox rHboxNameIdInfo = new HBox(HBOX_GAP, rLabelLabelName, rLabelValueName, rLabelLabelID, rLabelValueID);
 rHboxNameIdInfo.setAlignment(Pos.CENTER);
 ```
+
+Two labels are created for label "Name: " and "ID: " and two labels will contain the value of user input name and id. Then all four label will be be added to a HBox layout with gap between each label HBOX_GAP which is 30. HBox layout will add name label, name, id, id label in order. All labels will be centered in the layout using setAlignment method with the argument Pos.CENTER.
 
 ### Course Title Layout
 ![course title](IMG_20220512_224848.jpg)
