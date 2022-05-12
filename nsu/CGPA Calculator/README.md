@@ -118,7 +118,7 @@ HBox rHboxNameIdInfo = new HBox(HBOX_GAP, rLabelLabelName, rLabelValueName, rLab
 rHboxNameIdInfo.setAlignment(Pos.CENTER);
 ```
 
-Two labels are created for label "Name: " and "ID: " and two labels will contain the value of user input name and id. Then all four label will be be added to a HBox layout with gap between each label HBOX_GAP which is 30. HBox layout will add name label, name, id, id label in order. All labels will be centered in the layout using setAlignment method with the argument Pos.CENTER.
+Two labels are created for label "Name: " and "ID: " and two labels will contain the value of user input name and id. Then all four label will be be added to a HBox layout with gap between each label HBOX_GAP which is 30. HBox layout will add name label, name, id label, id in order. All labels will be centered in the layout using setAlignment method with the argument Pos.CENTER.
 
 ### Course Title Layout
 ![course title](IMG_20220512_224848.jpg)
@@ -139,6 +139,8 @@ rVboxSubject.getChildren().addAll(rSubject);
 rVboxSubject.setAlignment(Pos.CENTER);
 ```
 
+This code snippet will create course titles. A course title header with no text is created to match credit and grade layout. A VBox layout is used with 50 px gap between each label. All titles are added in numerical order and aligned center of vertical layout.
+
 ### Course Layout
 ![course layout](IMG_20220512_224912.jpg)
 
@@ -157,6 +159,8 @@ VBox rVboxCourse = new VBox(VBOX_GAP, rHeaderCourse);
 rVboxCourse.getChildren().addAll(rCourse);
 rVboxCourse.setAlignment(Pos.CENTER);
 ```
+
+This code snippet will create course labels. A header label "Course" and 5 labels for selected course items from comboBox is created. A VBox layout is used with 50 px gap between each label. the header label and course labels are added to Vbox layout in order. Then all the elements in the layout are aligned in center.
 
 ### Credit Layout
 ![Credit layout](IMG_20220512_224930.jpg)
@@ -178,6 +182,8 @@ rVboxCredit.getChildren().addAll(rCredit);
 rVboxCredit.setAlignment(Pos.CENTER);
 ```
 
+This code snippet will create credit labels. A header label "Credit" and 5 labels for selected credit items from comboBox is created. A VBox layout is used with 50 px gap between each label. the header label and credit labels are added to Vbox layout in order. Then all the elements in the layout are aligned in center.
+
 ### Grade Layout
 ![grade layout](IMG_20220512_224947.jpg)
 
@@ -196,6 +202,8 @@ VBox rVboxGrade = new VBox(VBOX_GAP, rHeaderGrade);
 rVboxGrade.getChildren().addAll(rGrade);
 rVboxGrade.setAlignment(Pos.CENTER);
 ```
+
+This code snippet will create grade labels. A header label "Grade" and 5 labels for selected course items from combobox is created. A VBox layout is used with 50 px gap between each label. the header label and grade labels are added to Vbox layout in order. Then all the elements in the layout are aligned in center.
 
 ### CGPA Layout
 ![cgpa layout](IMG_20220512_225133.jpg)
@@ -216,18 +224,35 @@ VBox rVboxCgpaInfo = new VBox(VBOX_GAP, rHboxLabelCgpa, rHboxValueCgpa);
 rVboxCgpaInfo.setAlignment(Pos.CENTER);
 ```
 
+This code snippet is for CGPA. A label for "Your CGPA: " and A label for calculated CGPA is created. Two HBox layout will contain each labels and a VBox layout will contain both HBox in order.
+
+### Course Info Layout
+![course info](IMG_20220513_014415.jpg)
+
+```java
+HBox rHboxCourseInfo = new HBox(HBOX_GAP, rVboxSubject, rVboxCourse, rVboxCredit, rVboxGrade);
+rHboxCourseInfo.setAlignment(Pos.CENTER);
+```
+
+All the vertical column layouts will be added to a HBox layout with 30 px gap between each elements. Every elements are then aligned in center.
+
 ### Final Layout
+![final layout](IMG_20220513_014616.jpg)
 
 ```java
 VBox rFinalLayout = new VBox(VBOX_GAP, rHboxHeader, rHboxNameIdInfo, rHboxCourseInfo, rVboxCgpaInfo);
 rFinalLayout.setAlignment(Pos.CENTER);
 ```
 
-### Creating Scene
+All the layouts that has been created so far will be added to the final layout.
+
+### Creating Scene and adding final layout to the scene
 
 ```java
 Scene scene = new Scene(rFinalLayout, SCENE_WIDTH, SCENE_HEIGHT);
 ```
+
+A 1200x700 scene is created with the final layout.
 
 ### Adding Scene to Stage
 
@@ -236,3 +261,5 @@ stage.setScene(scene);
 stage.setTitle("CGPA Calculator");
 stage.show();
 ```
+
+The scene is added to the main stage. The title of the stage is set to "CGPA Calculator". stage.show() method will show the stage on the window.
