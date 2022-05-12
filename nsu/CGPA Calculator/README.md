@@ -83,14 +83,86 @@ for(int i=0; i<strInfo.length; i++){
 rCGPA = rCGPA/rTotalCredit;
 ```
 
-### Scene Header
+### Scene Header Layout
 ![Scene Header](IMG_20220512_224751.jpg)
 
 ```java
+// ui
 Label rLabelHeader = new Label("CGPA Calculator");
 // layouts
 HBox rHboxHeader = new HBox(HBOX_GAP, rLabelHeader);
 rHboxHeader.setAlignment(Pos.CENTER);
 ```
 
-### 
+### Name & ID Layout
+![Name](IMG_20220512_224827.jpg)
+
+```java
+// ui
+Label rLabelLabelName = new Label("Name: ");
+Label rLabelValueName = new Label(rStrName);
+Label rLabelLabelID = new Label("ID: ");
+Label rLabelValueID = new Label(rStrID);
+
+// layout
+HBox rHboxNameIdInfo = new HBox(HBOX_GAP, rLabelLabelName, rLabelValueName, rLabelLabelID, rLabelValueID);
+rHboxNameIdInfo.setAlignment(Pos.CENTER);
+```
+
+### Course Title Layout
+![course title](IMG_20220512_224848.jpg)
+
+```java
+// ui
+Label rHeaderSubject = new Label();
+Label[] rSubject = new Label[5];
+
+for(int i=0; i<strInfo.length; i++){
+    rSubject[i] = new Label("Course " + (i+1) + " : ");
+    // codes .....
+}
+
+// layout
+VBox rVboxSubject = new VBox(VBOX_GAP, rHeaderSubject);
+rVboxSubject.getChildren().addAll(rSubject);
+rVboxSubject.setAlignment(Pos.CENTER);
+```
+
+### Course Layout
+![course layout](IMG_20220512_224912.jpg)
+
+```java
+//ui
+Label rHeaderCourse = new Label("Course");
+Label[] rCourse = new Label[5];
+for(int i=0; i<strInfo.length; i++){
+    // codes ...
+    rCourse[i] = new Label(strInfo[i][0]);
+    // codes ...
+}
+
+// layout
+VBox rVboxCourse = new VBox(VBOX_GAP, rHeaderCourse);
+rVboxCourse.getChildren().addAll(rCourse);
+rVboxCourse.setAlignment(Pos.CENTER);
+```
+
+### Credit Layout
+![Credit layout](IMG_20220512_224930.jpg)
+
+```java
+// ui
+Label rHeaderCredit = new Label("Credit");
+Label[] rCredit = new Label[5];
+
+for(int i=0; i<strInfo.length; i++){
+    // codes ...
+    rCredit[i] = new Label(strInfo[i][1]);
+    // codes ...
+}
+
+// layout
+VBox rVboxCredit = new VBox(VBOX_GAP, rHeaderCredit);
+rVboxCredit.getChildren().addAll(rCredit);
+rVboxCredit.setAlignment(Pos.CENTER);
+```
