@@ -166,3 +166,62 @@ VBox rVboxCredit = new VBox(VBOX_GAP, rHeaderCredit);
 rVboxCredit.getChildren().addAll(rCredit);
 rVboxCredit.setAlignment(Pos.CENTER);
 ```
+
+### Grade Layout
+![grade layout](IMG_20220512_224947.jpg)
+
+```java
+// ui
+Label rHeaderGrade = new Label("Grade");
+Label[] rGrade = new Label[5];
+
+for(int i=0; i<strInfo.length; i++){
+    // codes ...
+    rGrade[i] = new Label(strInfo[i][2]);
+}
+
+// layout
+VBox rVboxGrade = new VBox(VBOX_GAP, rHeaderGrade);
+rVboxGrade.getChildren().addAll(rGrade);
+rVboxGrade.setAlignment(Pos.CENTER);
+```
+
+### CGPA Layout
+![cgpa layout](IMG_20220512_225133.jpg)
+
+```java
+// ui
+Label rLabelCgpa = new Label("Your CGPA : ");
+Label rValueCgpa = new Label(String.valueOf(rCGPA));
+
+// layout
+HBox rHboxLabelCgpa = new HBox(HBOX_GAP, rLabelCgpa);
+rHboxLabelCgpa.setAlignment(Pos.CENTER);
+
+HBox rHboxValueCgpa = new HBox(HBOX_GAP, rValueCgpa);
+rHboxValueCgpa.setAlignment(Pos.CENTER);
+
+VBox rVboxCgpaInfo = new VBox(VBOX_GAP, rHboxLabelCgpa, rHboxValueCgpa);
+rVboxCgpaInfo.setAlignment(Pos.CENTER);
+```
+
+### Final Layout
+
+```java
+VBox rFinalLayout = new VBox(VBOX_GAP, rHboxHeader, rHboxNameIdInfo, rHboxCourseInfo, rVboxCgpaInfo);
+rFinalLayout.setAlignment(Pos.CENTER);
+```
+
+### Creating Scene
+
+```java
+Scene scene = new Scene(rFinalLayout, SCENE_WIDTH, SCENE_HEIGHT);
+```
+
+### Adding Scene to Stage
+
+```java
+stage.setScene(scene);
+stage.setTitle("CGPA Calculator");
+stage.show();
+```
