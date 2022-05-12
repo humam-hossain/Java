@@ -1,11 +1,9 @@
 # Report
 
 ## Second Scene
-
 ![scene_2](scene_2.png)
 
 After clicking "Calculate" button, second scene will appear where calculated cgpa will be shown.
-
 ```java
 btnCalculate.setOnAction(new EventHandler<ActionEvent>() {
     @Override
@@ -15,6 +13,7 @@ btnCalculate.setOnAction(new EventHandler<ActionEvent>() {
 }
 ```
 
+### Name & ID
 ```java
 String rStrName = tfName.getText().toString();
 String rStrID = tfID.getText().toString();
@@ -86,9 +85,12 @@ rCGPA = rCGPA/rTotalCredit;
 
 ### Scene Header
 ![Scene Header](IMG_20220512_224751.jpg)
+
 ```java
 Label rLabelHeader = new Label("CGPA Calculator");
 // layouts
 HBox rHboxHeader = new HBox(HBOX_GAP, rLabelHeader);
 rHboxHeader.setAlignment(Pos.CENTER);
 ```
+
+### 
