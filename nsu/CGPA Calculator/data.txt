@@ -1,6 +1,6 @@
-"humam hossain" 12315646
-"ENG 111 Public Speaking" 1.5 A
-"PHI 101 Introduction to Philosophy" 1.5 A
-"LBA 102 Introduction to World Civilization" 1.5 A
-"LBA 102 Introduction to World Civilization" 1 A
-"LBA 101 Bangladesh Culture and Heritage" 0 A
+"klsdjfksdfjl" 031665432
+"ENG 111 Public Speaking" 1.5 B-
+"PHI 104 Introduction to Ethics" 1.5 C+
+"PHI 101 Introduction to Philosophy" 1 B+
+"PHI 101 Introduction to Philosophy" 1.5 B-
+"ECO 101 Introduction to Microeconomics" 3 A
