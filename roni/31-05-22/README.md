@@ -48,7 +48,8 @@ public class Food {
     }
 
     void showDetails(){
-        System.out.println("Name: " + m_name + "\nSpecialIngredients: " + m_specialIngredients + "\nPrice: " + m_price + "\nCalories: " + m_calories);
+        System.out.println("Name: " + m_name + "\nSpecialIngredients: " + m_specialIngredients + "\nPrice: " + 
+        m_price + "\nCalories: " + m_calories);
     }
 }
 ```
