@@ -3,6 +3,8 @@
 ### Food Class
 
 ```java
+
+
 public class Food {
     private String m_name, m_specialIngredients;
     private double m_price;
