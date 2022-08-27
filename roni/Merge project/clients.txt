@@ -1,0 +1,11 @@
+Name/Mobile/Address/Email
+1stclient,1234567890,asdfghjkl,client1@gmail.com,
+mama,123456,dgfhg,wretgdfh,
+chacha,987654,dfghbn,hjghcbv,
+2ndstclient,1234567890,asdfghjkl,client1@gmail.com,
+mama2,123456,dgfhg,wretgdfh,
+2chacha,987654,dfghbn,hjghcbv,
+3rdstclient,1234567890,asdfghjkl,client1@gmail.com,
+mama3,123456,dgfhg,wretgdfh,
+chacha3,987654,dfghbn,hjghcbv,
+,,,
