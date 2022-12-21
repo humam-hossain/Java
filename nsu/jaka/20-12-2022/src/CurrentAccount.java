@@ -12,25 +12,25 @@ public class CurrentAccount extends Accounts {
 
     // getters & setters
     public int getAccountNo() {
-        return accountNo;
+        return super.getCustomer_id();
     }
 
     public void setAccountNo(int accountNo) {
-        this.accountNo = accountNo;
+        super.setCustomer_id(accountNo);
     }
 
     public int getBalance() {
-        return balance;
+        return super.getBalance();
     }
 
     public void setBalance(int balance) {
-        this.balance = balance;
+        super.setBalance(balance);
     }
 
     // methods
     public void transactions(){
         try {
-            File file = new File(Integer.toString(this.accountNo));
+            File file = new File(Integer.toString(this.getAccountNo()));
             Scanner in = new Scanner(file);
 
             while(in.hasNextLine()){

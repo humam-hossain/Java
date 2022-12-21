@@ -31,8 +31,8 @@ public class Accounts {
             this.balance += amount;
 
             try {
-                FileWriter fwriter = new FileWriter(Integer.toString(this.customer_id));
-                fwriter.write("Deposited: " + amount + " Balance: " + this.balance + "\n");
+                FileWriter fwriter = new FileWriter(Integer.toString(this.customer_id), true);
+                fwriter.write("Deposited: " + amount + "\tBalance: " + this.balance + "\n");
                 fwriter.close();
             } catch (Exception e) {
                 System.out.println(e);
@@ -45,8 +45,8 @@ public class Accounts {
             this.balance -= amount;
 
             try {
-                FileWriter fwriter = new FileWriter(Integer.toString(this.customer_id));
-                fwriter.write("Withrawn: " + amount + " Balance: " + this.balance + "\n");
+                FileWriter fwriter = new FileWriter(Integer.toString(this.customer_id), true);
+                fwriter.write("Withrawn: " + amount + "\tBalance: " + this.balance + "\n");
                 fwriter.close();
             } catch (Exception e) {
                 System.out.println(e);
@@ -58,6 +58,10 @@ public class Accounts {
         try {
             File file = new File(Integer.toString(this.customer_id));
             file.createNewFile();
+
+            FileWriter fw = new FileWriter(file);
+            fw.write(this.customer_id + " account created\tBalance: " + this.balance + "\n");
+            fw.close();
         } catch (Exception e) {
             System.out.println(e);
         }
